@@ -21,18 +21,7 @@ class ScannerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scan)
-        setSupportActionBar(toolbar_scanner)
-        supportActionBar?.run {
-            applyToolbarUp(showTitle = true)
-        }
-        setToolbarTitle(getString(R.string.scanner_title))
-
-    }
-
-    private fun setToolbarTitle(title: String) {
-        supportActionBar?.run {
-            setTitle(title)
-        }
+        toScanner()
     }
 
     private fun toScanner() = goTo(
@@ -40,7 +29,7 @@ class ScannerActivity : AppCompatActivity() {
             tag = ScannerFragment.TAG)
 
     private fun goTo(fragment: Fragment, tag: String) {
-        ftm.replaceFragment(fragment, tag, R.id.fl_scanner)
+        ftm.replaceFragment(fragment, tag, R.id.container_scanner)
     }
 
 

@@ -3,6 +3,7 @@ package com.spike.scanner.ui.scanner
 import android.Manifest
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -84,22 +85,24 @@ class ScannerFragment : Fragment(), EasyPermissions.PermissionCallbacks {
             startCamera()
         }
 
-        showSnackBar(false)
+        showSnackBar(false, null)
 
     }
 
     private fun handleResult(rawResult: Result) {
         //scannerViewModel.getBarcodeData(rawResult.text)
-        showSnackBar(true)
+        Log.d("Scanner", rawResult.text)
+        Log.d("Scanner", rawResult.toString())
+        showSnackBar(true, rawResult)
     }
 
-    private fun showSnackBar(isScanned: Boolean) {
+    private fun showSnackBar(isScanned: Boolean, rawResult: Result?) {
         val snackBarText: String
         val color: Int?
         val drawableScan: Int
 
         if (isScanned) {
-            snackBarText = getString(R.string.scanned)
+            snackBarText = getString(R.string.scanned) + ":  " + rawResult?.text
             color = context?.let { ContextCompat.getColor(it, R.color.green) }
             drawableScan = R.drawable.ic_launcher_background
         } else {
@@ -108,7 +111,7 @@ class ScannerFragment : Fragment(), EasyPermissions.PermissionCallbacks {
             drawableScan = R.drawable.ic_launcher_foreground
 
         }
-        val snackBar = view?.let { Snackbar.make(it, snackBarText, Snackbar.LENGTH_INDEFINITE) }
+        val snackBar = view?.let { Snackbar.make(it, snackBarText, Snackbar.LENGTH_LONG) }
         val textView: TextView? = view?.findViewById(com.google.android.material.R.id.snackbar_text)
         textView?.setCompoundDrawablesWithIntrinsicBounds(0, 0, drawableScan, 0)
 
