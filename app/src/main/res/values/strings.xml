@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Scanner</string>
+    <string name="qr_description_text">Scan barcode</string>
+    <string name="label_retry">Retry</string>
+    <string name="scanner_title">Scan barcodes</string>
+    <string name="found">Found</string>
+    <string name="try_scanning_again">Try scanning again</string>
+    <string name="camera_permission_denied_copy">Camera permission denied</string>
+    <string name="scanned">Scanned</string>
+    <string name="scanning">Scanning</string>
+    <string name="permission_camera_rationale">The camera is needed to scan the barcode.</string>
+</resources>

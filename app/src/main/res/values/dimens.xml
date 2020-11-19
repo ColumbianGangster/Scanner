@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="material_design_spacing_small">4dp</dimen>
+    <dimen name="material_design_spacing_medium">8dp</dimen>
+    <dimen name="material_design_spacing_mediumlarge">12dp</dimen>
+    <dimen name="material_design_spacing_large">16dp</dimen>
+    <dimen name="material_design_spacing_xlarge">20dp</dimen>
+    <dimen name="material_design_spacing_xxlarge">24dp</dimen>
+
+    <dimen name="text_5">8sp</dimen>
+    <dimen name="text_4">10sp</dimen>
+    <dimen name="text_3">12sp</dimen>
+    <dimen name="text_3_5">14sp</dimen>
+    <dimen name="text_2">16sp</dimen>
+    <dimen name="text_1">20sp</dimen>
+    <dimen name="elevation_5dp">5dp</dimen>
+    <dimen name="plp_margin_common">8dp</dimen>
+
+
+</resources>

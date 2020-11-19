@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+        android:id="@+id/tv_scan_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="@dimen/material_design_spacing_xxlarge"
+        android:layout_marginStart="@dimen/material_design_spacing_mediumlarge"
+        android:layout_marginEnd="@dimen/material_design_spacing_mediumlarge"
+        android:elevation="@dimen/elevation_5dp"
+        android:gravity="center_horizontal"
+        android:text="@string/qr_description_text"
+        android:textColor="@color/branding_white"
+        android:textSize="@dimen/text_2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_retry"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:text="@string/label_retry"
+        tools:visibility="visible"
+        />
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+        android:id="@+id/scanner_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</FrameLayout>

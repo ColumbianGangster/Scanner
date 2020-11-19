@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_product_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/material_design_spacing_mediumlarge"
+        android:layout_marginTop="@dimen/material_design_spacing_medium"
+        android:text="@string/found"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_scan_again"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/plp_margin_common"
+        android:padding="@dimen/material_design_spacing_mediumlarge"
+        android:clickable="true"
+        android:focusable="true"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/try_scanning_again"
+        android:layout_marginBottom="@dimen/material_design_spacing_xxlarge"
+        />
+
+</LinearLayout>
