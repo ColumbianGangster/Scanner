@@ -1,4 +1,4 @@
-package com.spike.scanner.ui.scanner
+package com.spike.scanner.ui.mlkitscanner
 
 import android.Manifest
 import android.graphics.Color
@@ -19,12 +19,15 @@ import org.greenrobot.eventbus.EventBus
 import org.greenrobot.eventbus.Subscribe
 import org.greenrobot.eventbus.ThreadMode
 import com.google.zxing.Result
+import com.spike.scanner.ui.zxingscanner.Scanner
+import com.spike.scanner.ui.zxingscanner.ScannerBottomSheetFragment
+import com.spike.scanner.ui.zxingscanner.ScannerStatusChanged
 
 import pub.devrel.easypermissions.AfterPermissionGranted
 import pub.devrel.easypermissions.EasyPermissions
 
 
-class ScannerFragment : Fragment(), EasyPermissions.PermissionCallbacks {
+class MLKitScannerFragment : Fragment(), EasyPermissions.PermissionCallbacks {
 
     private lateinit var scannerBottomSheetFragment: ScannerBottomSheetFragment
 
@@ -164,7 +167,7 @@ class ScannerFragment : Fragment(), EasyPermissions.PermissionCallbacks {
         const val TAG = "Scanner Fragment"
         private const val PERMISSION_CAMERA = Manifest.permission.CAMERA
         private const val CAMERA_PERMISSION_REQUEST_CODE = 100
-        fun newInstance() = ScannerFragment()
+        fun newInstance() = MLKitScannerFragment()
     }
 
     private fun stopCamera() {

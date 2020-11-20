@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.scanner.ScannerActivity"
+        <activity android:name=".ui.zxingscanner.ZXingScannerActivity"
             android:screenOrientation="portrait"
             android:label="Scanner"
             />

@@ -1,4 +1,4 @@
-package com.spike.scanner.ui.scanner
+package com.spike.scanner.ui.zxingscanner
 
 data class ScannerStatusChanged(val origin: Scanner)
 

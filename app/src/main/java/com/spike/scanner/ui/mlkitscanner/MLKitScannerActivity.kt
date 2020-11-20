@@ -1,4 +1,4 @@
-package com.spike.scanner.ui.scanner
+package com.spike.scanner.ui.mlkitscanner
 
 
 import android.os.Bundle
@@ -11,10 +11,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.spike.scanner.R
 import com.spike.scanner.ui.FragmentsTransactionsManager
-import com.spike.scanner.ui.applyToolbarUp
-import kotlinx.android.synthetic.main.activity_scan.*
+import com.spike.scanner.ui.zxingscanner.ZXingScannerFragment
 
-class ScannerActivity : AppCompatActivity() {
+class MLKitScannerActivity : AppCompatActivity() {
 
     val ftm = FragmentsTransactionsManager(supportFragmentManager)
 
@@ -25,8 +24,9 @@ class ScannerActivity : AppCompatActivity() {
     }
 
     private fun toScanner() = goTo(
-            fragment = ScannerFragment.newInstance(),
-            tag = ScannerFragment.TAG)
+            fragment = ZXingScannerFragment.newInstance(),
+            tag = ZXingScannerFragment.TAG
+    )
 
     private fun goTo(fragment: Fragment, tag: String) {
         ftm.replaceFragment(fragment, tag, R.id.container_scanner)
